@@ -9,19 +9,25 @@
   <style>
     :root { color-scheme: light dark; }
     body { font-family: system-ui, sans-serif; max-width: 640px; margin: 0 auto; padding: 16px; }
-    h1 { font-size: 1.3rem; }
+    header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+    header img { width: 72px; height: auto; border-radius: 10px; flex: none; }
+    h1 { font-size: 1.3rem; margin: 0; }
     ul { list-style: none; padding: 0; margin: 0; }
     li { margin-bottom: 8px; }
     a {
       display: block; padding: 12px 14px; border: 1px solid #c4c7c5; border-radius: 10px;
       color: #1a73e8; font-weight: 600; text-decoration: none; transition: background 0.15s;
+      cursor: pointer; user-select: none;
     }
     a:hover { background: rgba(26, 115, 232, 0.1); }
     a:focus-visible { outline: 3px solid #8ab4f8; outline-offset: 2px; }
   </style>
 </head>
 <body>
-  <h1>My Projects</h1>
+  <header>
+    <img src="photo.jpg" alt="Rajkumar">
+    <h1>My Projects</h1>
+  </header>
   <ul>
     <li><a href="https://clipboard-185469394031.asia-south1.run.app">Online Clipboard</a></li>
     <li><a href="https://fileshare-185469394031.asia-south1.run.app">File Share</a></li>
