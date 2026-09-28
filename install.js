@@ -10,7 +10,8 @@
 // `html.pwa-btn-visible .my-header { padding-right: 46px; }` — that class is only present while the
 // button is actually shown.
 (() => {
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(() => {});
+  // relative path: this is a static bucket site with no domain root of its own to register against
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 
   const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
   const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
