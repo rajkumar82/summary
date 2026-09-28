@@ -13,3 +13,15 @@ the icons if they changed):
     gcloud storage cp index.html gs://rajkumar-summary/index.html --content-type="text/html; charset=utf-8" --cache-control="no-cache"
 
 The bucket has no lifecycle rule on purpose (the clipboard bucket deletes objects after 3 days).
+
+## Installable (PWA)
+
+The page can be added to the home screen via the ⋮ menu (`install.js`). Because this is a static bucket site with
+no domain root of its own (it's served under a bucket path prefix on storage.googleapis.com), every path here is
+relative — `install.js` registers `sw.js` as `'sw.js'`, not `'/sw.js'`, and `manifest.webmanifest`'s `start_url`/
+icon paths are relative too. All PWA files (`manifest.webmanifest`, `sw.js`, `install.js`, `icon-*.png`) must sit
+next to `index.html` at the bucket root, so upload the whole directory, not just `index.html`:
+
+    gcloud storage cp index.html manifest.webmanifest sw.js install.js icon-192.png icon-512.png icon-maskable-512.png photo.jpg favicon.png apple-touch-icon.png gs://rajkumar-summary/ --cache-control="no-cache"
+
+Bump `CACHE` in `sw.js` when any shell file changes in a way that must not be served stale.

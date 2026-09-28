@@ -7,8 +7,13 @@
   <meta name="description" content="Rajkumar's hobby projects">
   <meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f1220" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Projects">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <style>
     :root {
       color-scheme: light dark;
@@ -95,12 +100,17 @@
       <p class="tagline">My hobby projects</p>
     </header>
 
-    <div class="heading">Projects <span>4</span></div>
+    <div class="heading">Projects <span>5</span></div>
     <!-- newest first: add new projects at the top (keep the "New" badge on the first one only) and bump the count above -->
     <ul>
+      <li><a class="project" href="https://newsapp-185469394031.asia-south1.run.app">
+        <span class="icon" aria-hidden="true">📰</span>
+        <span class="text"><span class="title">Daily News <span class="badge">New</span></span>
+          <span class="desc">Today's top stories as short cards you scroll like reels</span></span>
+        <span class="arrow" aria-hidden="true">›</span></a></li>
       <li><a class="project" href="https://github.com/rajkumar82/PaperScanner">
         <span class="icon" aria-hidden="true">🧾</span>
-        <span class="text"><span class="title">Paper Scanner <span class="badge">New</span></span>
+        <span class="text"><span class="title">Paper Scanner</span>
           <span class="desc">Point your phone at an exam booklet and tally red-circled marks automatically</span></span>
         <span class="arrow" aria-hidden="true">›</span></a></li>
       <li><a class="project" href="https://todolist-185469394031.asia-south1.run.app">
@@ -120,5 +130,6 @@
         <span class="arrow" aria-hidden="true">›</span></a></li>
     </ul>
   </main>
+  <script src="install.js" defer></script>
 </body>
 </html>
