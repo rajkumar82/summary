@@ -2,7 +2,7 @@
 // open offline. Paths are relative (no leading /) since the site has no domain root of its own —
 // it's served under a bucket path prefix on storage.googleapis.com.
 // Bump CACHE when the shell files change in a way that must not be served stale.
-const CACHE = 'summary-v1';
+const CACHE = 'summary-v2';
 const SHELL = ['index.html', 'manifest.webmanifest', 'photo.jpg', 'favicon.png', 'apple-touch-icon.png',
   'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'install.js'];
 

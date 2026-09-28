@@ -78,8 +78,9 @@
     a.project:focus-visible { outline: 3px solid rgba(26, 115, 232, 0.55); outline-offset: 2px; }
     .icon {
       flex: none; width: 48px; height: 48px; display: grid; place-items: center;
-      border-radius: 15px; background: var(--card2); font-size: 1.6rem;
+      border-radius: 15px; background: var(--card2); font-size: 1.6rem; overflow: hidden;
     }
+    .icon img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
     .text { flex: 1; min-width: 0; }
     .title { display: flex; align-items: center; gap: 8px; font-size: 1.05rem; font-weight: 700; }
     .desc { display: block; margin-top: 2px; color: var(--muted); font-size: 0.85rem; line-height: 1.35; }
@@ -104,7 +105,7 @@
     <!-- newest first: add new projects at the top (keep the "New" badge on the first one only) and bump the count above -->
     <ul>
       <li><a class="project" href="https://photoshare-185469394031.asia-south1.run.app">
-        <span class="icon" aria-hidden="true">📷</span>
+        <span class="icon" aria-hidden="true"><img src="https://photoshare-185469394031.asia-south1.run.app/icon-192.png" alt=""></span>
         <span class="text"><span class="title">PhotoShare <span class="badge">New</span></span>
           <span class="desc">Sign in with Google, Facebook, or Apple and share your photos</span></span>
         <span class="arrow" aria-hidden="true">›</span></a></li>
